@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gl.ControllerFXML.MainWindowController">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #f7f5f1;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <Label fx:id="showPathNameLabel" contentDisplay="CENTER" layoutX="33.0" layoutY="44.0" prefHeight="34.0" prefWidth="475.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #0e141d; -fx-label-padding: 5px; -fx-border-radius: 5px 0 0 5px;" text="Путь к директории" textAlignment="CENTER">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+                <Button fx:id="chooseFileButton" cache="true" cacheHint="SCALE" layoutX="508.0" layoutY="44.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="123.0" style="-fx-background-color: #f1eee5; -fx-border-color: #0e141d; -fx-border-radius: 0 5px 5px 0; -fx-padding: 5 px; -fx-cursor: HAND;" text="Выбрать папку">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Label layoutX="829.0" layoutY="203.0" text="Загруженные дельты">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Button fx:id="loadDirectoryButton" cache="true" cacheHint="SCALE" layoutX="54.0" layoutY="107.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="115.0" style="-fx-background-color: #f1eee5; -fx-border-color: #0e141d; -fx-border-radius: 5px; -fx-padding: 5 px; -fx-cursor: HAND;" text="Загрузить">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Label layoutX="39.0" layoutY="203.0" text="Загружаемые файлы">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="viewLoadFile" layoutX="39.0" layoutY="228.0" prefHeight="448.0" prefWidth="761.0">
+                    <columns>
+                        <TableColumn id="FileName" fx:id="FileName" prefWidth="440.79998779296875" text="Название файла" />
+                        <TableColumn id="Region" fx:id="Region" minWidth="0.0" prefWidth="63.66668701171875" text="Регион" />
+                        <TableColumn fx:id="Inserting" prefWidth="88.0" text="Добавлено" />
+                        <TableColumn fx:id="Updating" prefWidth="88.0" text="Обновлено" />
+                        <TableColumn fx:id="Errors" prefWidth="79.0" text="Ошибки" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="viewFile" layoutX="829.0" layoutY="226.0" prefHeight="448.0" prefWidth="233.0">
+                    <columns>
+                        <TableColumn fx:id="Date" prefWidth="104.0" text="Дата" />
+                        <TableColumn fx:id="Status" prefWidth="128.7999267578125" text="Статус" />
+                    </columns>
+                </TableView>
+                <Label fx:id="info" layoutX="180.0" layoutY="111.0" prefHeight="27.0" prefWidth="171.0">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font></Label>
+                <Button fx:id="loadArchivesButton" cache="true" cacheHint="SCALE" layoutX="714.0" layoutY="44.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="145.0" style="-fx-background-color: #f1eee5; -fx-border-color: #0e141d; -fx-border-radius: 5px; -fx-padding: 5 px; -fx-cursor: HAND;" text="Подгрузить данные">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <TextArea fx:id="loadingArchives" editable="false" layoutX="715.0" layoutY="89.0" prefHeight="104.0" prefWidth="350.0" style="-fx-t: pointer;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextArea>
+            <Label fx:id="inform" layoutX="876.0" layoutY="48.0" prefHeight="27.0" prefWidth="171.0">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
